@@ -40,7 +40,7 @@ public class Voters {
 				System.out.println("");
 				Voter voter = new Voter(idNum, name, maleRelative, age, address, province);
 				voters.add(voter);
-				FileWriter fileWriter = new FileWriter("C:\\Users\\YourPcName\\Desktop\\voters.txt", true);
+			    FileWriter fileWriter = new FileWriter("C:\\Users\\YourPcName\\Desktop\\voters.txt" , true);
 				fileWriter.append("\n").append(voter.toString());
 				fileWriter.flush();
 				fileWriter.close();
@@ -68,9 +68,9 @@ public class Voters {
 				int s = nn.nextInt();
 				System.out.println();
 				for (Voter v : voters) {
-					if (v.nationalIdNumber == s) {
+					if (v.nationalIdNumber == s)  {
 						System.out.println(v);
-					}
+											}
 				}
 				break;
 			case 5:
@@ -91,7 +91,7 @@ public class Voters {
 		public String province;
 
 		public Voter(int nationalIdNumber, String name, String maleRelativeName, int age, String address,
-				String province) {
+			String province) {
 			this.nationalIdNumber = nationalIdNumber;
 			this.name = name;
 			this.maleRelativeName = maleRelativeName;
@@ -100,7 +100,6 @@ public class Voters {
 			this.province = province;
 		}
 
-		@Override
 		public String toString() {
 			return "Id: " + nationalIdNumber + "  Name: " + name + "  Male Relative: " + maleRelativeName + "  Age: "
 					+ age + "  Address: " + address + "  Province: " + province;
